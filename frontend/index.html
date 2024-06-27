@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonnet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="itemForm" enctype="multipart/form-data">
+        <label for="item">Item:</label>
+        <input type="text" id="item" name="item" required>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required>
+
+        <label for="file">Choose File:</label>
+        <input type="file" id="file" name="file">
+
+        <label>Tags:</label>
+        <input type="checkbox" name="tags[]" value="Primary"> Primary
+        <input type="checkbox" name="tags[]" value="FTD"> FTD
+        <input type="checkbox" name="tags[]" value="Hidden"> Hidden
+        <input type="checkbox" name="tags[]" value="Send message"> Send message
+
+        <button type="submit">Add Item</button>
+    </form>
+    <script src="scripts.js"></script>
+</body>
+</html>
