@@ -33,3 +33,6 @@ body {
 #toggleOptions:hover {
     color: #0056b3;
 }
+#confirmation {
+    display: none;
+}
