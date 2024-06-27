@@ -8,27 +8,45 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="src/css/styles.css">
 </head>
 <body>
-    <form id="itemForm" enctype="multipart/form-data">
-        <label for="item">Item:</label>
-        <input type="text" id="item" name="item" required>
-
-        <label for="category">Category:</label>
-        <input type="text" id="category" name="category" required>
-
-        <label for="file">Choose File:</label>
-        <input type="file" id="file" name="file">
-
-        <label>Tags:</label>
-        <input type="checkbox" name="tags[]" value="Primary"> Primary
-        <input type="checkbox" name="tags[]" value="FTD"> FTD
-        <input type="checkbox" name="tags[]" value="Hidden"> Hidden
-        <input type="checkbox" name="tags[]" value="Send message"> Send message
-
-        <button type="submit">Add Item</button>
-    </form>
-    <script src="scripts.js"></script>
+    <div class="container">
+        <form id="itemForm" enctype="multipart/form-data" class="mt-5">
+            <div class="form-group">
+                <label for="item">Item</label>
+                <input type="text" class="form-control" id="item" name="item" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category</label>
+                <input type="text" class="form-control" id="category" name="category" required>
+            </div>
+            <div class="form-group">
+                <label for="file">Choose File</label>
+                <input type="file" class="form-control-file" id="file" name="file">
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="tags[]" value="Primary">
+                <label class="form-check-label">Primary</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="tags[]" value="FTD">
+                <label class="form-check-label">FTD</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="tags[]" value="Hidden">
+                <label class="form-check-label">Hidden</label>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" name="tags[]" value="Send message">
+                <label class="form-check-label">Send message</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Add Item</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="src/js/scripts.js"></script>
 </body>
 </html>
