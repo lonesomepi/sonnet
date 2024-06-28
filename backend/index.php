@@ -1,7 +1,8 @@
 <?php
+require_once 'config/database.php';
 require_once 'controllers/ItemController.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $item = $_POST['item'];
     $category = $_POST['category'];
     $file = $_FILES['file']['name'];
@@ -15,5 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         echo "Failed to add item";
     }
+} else {
+    echo "Invalid request method.";
 }
 ?>

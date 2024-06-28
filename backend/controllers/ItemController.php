@@ -12,7 +12,7 @@ class ItemController {
 
     public function addItem($item, $category, $file, $tags) {
         $query = "INSERT INTO " . $this->table_name . " (item, category, file, tags) VALUES (:item, :category, :file, :tags)";
-        $stmt = $this->conn->prepare($query);
+        $stmt = $->conn->prepare($query);
 
         $stmt->bindParam(':item', $item);
         $stmt->bindParam(':category', $category);
@@ -22,6 +22,8 @@ class ItemController {
         if ($stmt->execute()) {
             return true;
         } else {
+            $errorInfo = $stmt->errorInfo();
+            error_log("Database error: " . $errorInfo[2]);
             return false;
         }
     }
