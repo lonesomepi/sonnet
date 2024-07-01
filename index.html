@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit Interface</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="commit-interface">
+        <div class="user-info">
+            <img src="user-avatar.png" alt="User Avatar" class="avatar">
+            <input type="text" placeholder="Commit message" class="commit-message">
+        </div>
+        <textarea placeholder="Description" class="description"></textarea>
+        <div class="contributors">
+            <input type="text" placeholder="Co-authors" class="co-authors">
+            <button class="commit-btn">Commit</button>
+        </div>
+    </div>
+    <script>
+    document.querySelector('.commit-btn').addEventListener('click', () => {
+        const commitMessage = document.querySelector('.commit-message').value;
+        const description = document.querySelector('.description').value;
+        const coAuthors = document.querySelector('.co-authors').value;
+    
+        if (commitMessage && description) {
+            console.log(`Commit Message: ${commitMessage}`);
+            console.log(`Description: ${description}`);
+            console.log(`Co-Authors: ${coAuthors}`);
+            alert('Commit successful!');
+        } else {
+            alert('Please fill in all fields.');
+        }
+    });
+</script>
+</body>
+</html>
